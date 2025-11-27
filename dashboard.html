@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - MyBlue Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 class="judul-web">Dashboard</h1>
+
+<div class="menu">
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('info')">Info</button>
+    <button onclick="showPage('contact')">Contact</button>
+    <button onclick="showPage('resources')">Resources</button>
+    <a href="index.html" class="logout">Logout</a>
+</div>
+
+<!-- HOME -->
+<div id="home" class="page active">
+    <h2>Halaman Utama</h2>
+    <p>Selamat datang di halaman Home.</p>
+</div>
+
+<!-- INFO -->
+<div id="info" class="page">
+    <h2>Informasi</h2>
+    <p>Website ini dibuat sebagai website statis dengan tampilan sederhana.</p>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="page">
+    <h2>Contact</h2>
+    <p>Hubungi kami melalui platform berikut:</p>
+    <a href="https://wa.me/6281234567890" target="_blank">📱 WhatsApp</a><br>
+    <a href="https://tiktok.com" target="_blank">🎵 TikTok</a><br>
+    <a href="https://instagram.com" target="_blank">📷 Instagram</a>
+</div>
+
+<!-- RESOURCES -->
+<div id="resources" class="page">
+    <h2>Resources</h2>
+    <p>Berbagai referensi dan sumber akan ditampilkan di sini.</p>
+</div>
+
+<script>
+    function showPage(pageName) {
+        let pages = document.getElementsByClassName("page");
+        for (let i = 0; i < pages.length; i++) {
+            pages[i].style.display = "none";
+        }
+        document.getElementById(pageName).style.display = "block";
+    }
+</script>
+
+</body>
+</html>
