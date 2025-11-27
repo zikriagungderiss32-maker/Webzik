@@ -1,4 +1,4 @@
-/* Background gambar + gradasi gelap agar teks tetap jelas */
+/* Background gambar + gradasi */
 body {
     background: linear-gradient(rgba(0, 70, 170, 0.6), rgba(0, 30, 90, 0.7)), url("bg.jpg");
     background-size: cover;
@@ -9,51 +9,52 @@ body {
     padding: 0;
 }
 
-/* Judul website */
+/* Judul */
 .judul-web {
     background: rgba(0, 70, 170, 0.9);
     color: white;
-    padding: 18px;
+    padding: 25px;
+    font-size: 36px;
     margin: 0;
-    font-size: 28px;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
-/* Box login & container dashboard */
+/* Container (Login & Dashboard) */
 .container {
     background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(8px);
-    width: 380px;
+    width: 480px;
     margin: 40px auto;
-    padding: 30px;
+    padding: 40px;
     border-radius: 18px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
     color: white;
+    font-size: 20px;
 }
 
-/* Input login */
+/* Input */
 input {
     width: 85%;
-    padding: 12px;
-    margin: 10px;
+    padding: 15px;
+    margin: 12px;
+    font-size: 18px;
     border: none;
     border-radius: 8px;
-    font-size: 16px;
 }
 
 /* Tombol */
 button {
-    padding: 10px 18px;
+    padding: 14px 22px;
     margin: 8px;
+    font-size: 18px;
     background: #007bff;
     border: none;
-    color: white;
-    cursor: pointer;
     border-radius: 8px;
-    font-size: 15px;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0 0 8px rgba(0, 140, 255, 0.7);
     transition: 0.3s;
-    box-shadow: 0 0 8px rgba(0, 140, 255, 0.6);
 }
 
 button:hover {
@@ -64,99 +65,85 @@ button:hover {
 /* Menu navbar */
 .menu {
     background: rgba(0, 60, 160, 0.95);
-    padding: 14px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
+    padding: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
 .menu button {
     background: transparent;
     border: 2px solid white;
-    color: white;
     box-shadow: none;
 }
 
 .menu button:hover {
     background: white;
     color: #003a9c;
-    transform: scale(1.07);
+    transform: scale(1.1);
 }
 
-/* Tombol logout warna kuning */
+/* Logout */
 .logout {
-    color: #ffee4a;
+    color: #ffeb3b !important;
+    margin-left: 20px;
     font-weight: bold;
-    margin-left: 18px;
 }
 
-/* Area halaman (home/info/contact/resources) */
+/* Halaman konten */
 .page {
     display: none;
-    margin-top: 40px;
+    margin-top: 55px;
+    font-size: 20px;
     color: white;
     animation: fade 0.4s ease;
 }
 
+/* Halaman default */
 #home {
-    display: block; /* halaman default */
+    display: block;
 }
 
-/* animasi fade */
+/* Animasi perpindahan halaman */
 @keyframes fade {
     from { opacity: 0; transform: translateY(8px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Contact links */
-#contact a, 
-#resources a {
+/* Link Contact & Resources */
+#contact a, #resources a {
     color: #ffea7a;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
+}
+#contact a:hover, #resources a:hover {
+    color: #ffffff;
+    text-decoration: underline;
 }
 
-#contact a:hover,
-#resources a:hover {
-    text-decoration: underline;
-    color: #ffffff;
-}
-/* RESPONSIVE UNTUK HP */
+/* ===== RESPONSIVE HP ===== */
 @media (max-width: 600px) {
     .container {
-        width: 90%;
-        margin: 25px auto;
-        padding: 20px;
+        width: 92%;
+        padding: 28px;
+        font-size: 18px;
     }
 
     .judul-web {
-        font-size: 22px;
-        padding: 12px;
+        font-size: 30px;
+        padding: 18px;
     }
 
-    .menu {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 6px;
-        padding: 10px;
+    button, .menu button {
+        font-size: 17px;
+        padding: 12px 18px;
     }
 
-    .menu button {
-        font-size: 14px;
-        padding: 7px 10px;
+    input {
+        font-size: 17px;
+        padding: 14px;
     }
 
-    h2 {
-        font-size: 20px;
-    }
-
-    #contact a, #resources a {
-        font-size: 16px;
-    }
-}
-
-/* RESPONSIVE UNTUK TABLET */
-@media (min-width: 601px) and (max-width: 900px) {
-    .container {
-        width: 70%;
+    .page {
+        font-size: 19px;
+        margin-top: 45px;
     }
 }
