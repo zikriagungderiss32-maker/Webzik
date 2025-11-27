@@ -1,68 +1,121 @@
+/* Background gambar + gradasi gelap agar teks tetap jelas */
 body {
-    background: #d8e9ff;
-    font-family: Arial, sans-serif;
+    background: linear-gradient(rgba(0, 70, 170, 0.6), rgba(0, 30, 90, 0.7)), url("bg.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: 'Poppins', Arial, sans-serif;
     text-align: center;
-}
-
-.judul-web {
-    background: #005bbb;
-    color: white;
-    padding: 15px;
     margin: 0;
+    padding: 0;
 }
 
+/* Judul website */
+.judul-web {
+    background: rgba(0, 70, 170, 0.9);
+    color: white;
+    padding: 18px;
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Box login & container dashboard */
 .container {
-    background: white;
-    width: 350px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+    width: 380px;
     margin: 40px auto;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    color: white;
 }
 
+/* Input login */
 input {
-    width: 90%;
-    padding: 10px;
-    margin: 8px;
+    width: 85%;
+    padding: 12px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
 }
 
+/* Tombol */
 button {
-    padding: 8px 15px;
-    margin: 4px;
-    background: #005bbb;
+    padding: 10px 18px;
+    margin: 8px;
+    background: #007bff;
     border: none;
     color: white;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: 0.3s;
+    box-shadow: 0 0 8px rgba(0, 140, 255, 0.6);
 }
 
 button:hover {
-    background: #0076e3;
+    background: #0098ff;
+    transform: scale(1.06);
 }
 
+/* Menu navbar */
 .menu {
-    background: #005bbb;
-    padding: 12px;
+    background: rgba(0, 60, 160, 0.95);
+    padding: 14px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
 }
 
 .menu button {
     background: transparent;
     border: 2px solid white;
+    color: white;
+    box-shadow: none;
 }
 
-.menu a {
-    color: #ffeb3b;
-    margin-left: 15px;
-    text-decoration: none;
+.menu button:hover {
+    background: white;
+    color: #003a9c;
+    transform: scale(1.07);
+}
+
+/* Tombol logout warna kuning */
+.logout {
+    color: #ffee4a;
     font-weight: bold;
+    margin-left: 18px;
 }
 
+/* Area halaman (home/info/contact/resources) */
 .page {
     display: none;
-    margin-top: 30px;
+    margin-top: 40px;
+    color: white;
+    animation: fade 0.4s ease;
 }
 
-.page.active,
 #home {
-    display: block;
+    display: block; /* halaman default */
+}
+
+/* animasi fade */
+@keyframes fade {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Contact links */
+#contact a, 
+#resources a {
+    color: #ffea7a;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#contact a:hover,
+#resources a:hover {
+    text-decoration: underline;
+    color: #ffffff;
 }
