@@ -119,3 +119,44 @@ button:hover {
     text-decoration: underline;
     color: #ffffff;
 }
+/* RESPONSIVE UNTUK HP */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        margin: 25px auto;
+        padding: 20px;
+    }
+
+    .judul-web {
+        font-size: 22px;
+        padding: 12px;
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+        padding: 10px;
+    }
+
+    .menu button {
+        font-size: 14px;
+        padding: 7px 10px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    #contact a, #resources a {
+        font-size: 16px;
+    }
+}
+
+/* RESPONSIVE UNTUK TABLET */
+@media (min-width: 601px) and (max-width: 900px) {
+    .container {
+        width: 70%;
+    }
+}
